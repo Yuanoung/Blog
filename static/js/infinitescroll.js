@@ -85,7 +85,8 @@ $(function ($) {
         currentPage += 1;
 
         // Load more
-        var nextPage = pathname + 'page/' + currentPage + '/';
+        // var nextPage = pathname + 'page/' + currentPage + '/';
+        var nextPage = document.getElementsByClassName("next_url")[0].outerText;
 
         $.get(nextPage, function (content) {
             var parse = document.createRange().createContextualFragment(content);

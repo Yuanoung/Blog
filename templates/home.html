@@ -17,9 +17,8 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}" />
 </head>
 <body class="home-template">
-
+<div class="next_url" style="display: none;">{{ next_url }}</div>
 <div class="site-wrapper">
-
 
     <header class="site-header outer " style="background-image: url(../media/images/121.jpg)">
         <div class="inner">
@@ -55,7 +54,7 @@
                         <div class="post-card-image"style="background-image: url({{ article.image_url }})"></div>
                     </a>
                     <div class="post-card-content">
-                        <a class="post-card-content-link" href="/adobe-muse-alternatives-for-mac/">
+                        <a class="post-card-content-link" href="/detail/{{ article.uuid }}/">
                             <header class="post-card-header">
                                 <span class="post-card-tags">{{ article.category }}</span>
                                 <h2 class="post-card-title">{{ article.title }}</h2>

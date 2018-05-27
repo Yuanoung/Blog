@@ -102,6 +102,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 9
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -123,4 +128,3 @@ STATICFILES_DIRS = [
     ("js", os.path.join(STATIC_ROOT, 'js/')),
     ("font", os.path.join(STATIC_ROOT, 'font/')),
 ]
-

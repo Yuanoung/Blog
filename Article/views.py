@@ -17,6 +17,8 @@ class ArticleListView(ListAPIView):
         r = super().get(request, *args, **kwargs)
         print(r.data)
         data = {
-            "article_list": r.data
+            "article_list": r.data["results"],
+            "next_url": r.data["next"]
         }
+        print(data)
         return Response(data, template_name="home.html", status=200)
