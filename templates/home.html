@@ -96,37 +96,12 @@
 
 </div>
 
-<div id="subscribe" class="subscribe-overlay">
-    <a class="subscribe-overlay-close" href="#"></a>
-    <div class="subscribe-overlay-content">
-        <img class="subscribe-overlay-logo" src="/content/images/2017/07/rm_logo.png" alt="The Realmac Blog"/>
-        <h1 class="subscribe-overlay-title">Subscribe to The Realmac Blog</h1>
-        <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered
-            straight to your inbox</p>
-        <form method="post" action="/subscribe/" class="">
-            <input class="confirm" type="hidden" name="confirm"/><input class="location" type="hidden" name="location"/><input
-                class="referrer" type="hidden" name="referrer"/>
-
-            <div class="form-group">
-                <input class="subscribe-email" type="email" name="email" placeholder="youremail@example.com"/>
-            </div>
-            <button class="" type="submit"><span>Subscribe</span></button>
-            <script>(function (g, h, o, s, t) {
-                h[o]('.location')[s] = h[o]('.location')[s] || g.location.href;
-                h[o]('.referrer')[s] = h[o]('.referrer')[s] || h.referrer;
-            })(window, document, 'querySelector', 'value');</script>
-        </form>
-
-
-    </div>
-</div>
-
 <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
 </script>
-<script type="text/javascript" src="/assets/js/jquery.fitvids.js?v=b8224c28ac"></script>
+<script type="text/javascript" src="{% static "js/jquery.fitvids.js" %}"></script>
 
 <script>
     // maxPages is a global variable that is needed to determine
@@ -134,7 +109,7 @@
     // we reached the last page already.
     var maxPages = parseInt('2');
 </script>
-<script src="/assets/js/infinitescroll.js?v=b8224c28ac"></script>
+<script src="{% static "js/infinitescroll.js" %}"></script>
 
 
 </body>
